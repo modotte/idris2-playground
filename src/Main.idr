@@ -28,8 +28,8 @@ isEven : Nat -> Bool
 isEven 0 = True
 isEven (S k) = not (isEven k)
 
-fourInts : Vect 5 Int
-fourInts = [0, 1, 2, 3, 5]
+FiveInts : Vect 5 Int
+FiveInts = [0, 1, 2, 3, 5]
 
 total allLengths : Vect len String -> Vect len Nat
 allLengths [] = []
@@ -38,9 +38,9 @@ allLengths (x :: xs) = length x :: allLengths xs
 total insert : Ord e => 
          (x : e) -> (xsSorted : Vect k e) -> Vect (S k) e
 insert x [] = [x]
-insert x (y :: xs) = case x < y of
-                          False => y :: insert x xs
-                          True => x :: y :: xs
+insert x (y :: ys) = case x < y of
+                          False => y :: insert x ys
+                          True => x :: y :: ys
 
 total insSort : Ord e => Vect n e -> Vect n e
 insSort [] = []
