@@ -121,9 +121,11 @@ pictureArea (Rotate x pic) = pictureArea pic
 pictureArea (Translate x y pic) = pictureArea pic
 
 
+-- Generic types
+
 
 
 
 main : IO ()
 main = do
-    putStrLn "Hello from Idris2!"
+    putStrLn "Hello from Idris2 Playground about types and pure functions"
