@@ -123,7 +123,15 @@ pictureArea (Translate x y pic) = pictureArea pic
 
 -- Generic types
 
-
+-- Too sleepy to figure out the implementation
+-- FIXME: Continue this later when coffee is on the line.
+biggestTriangle : Picture -> Maybe Double
+biggestTriangle pic = 
+    case pic of
+         Primitive s => case s of
+                   Triangle _ _ => Just $ pictureArea pic
+                   _            => Nothing
+         _           =>  Nothing
 
 
 main : IO ()
