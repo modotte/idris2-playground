@@ -1,0 +1,6 @@
+package play
+sourcedir = "src"
+modules = Main
+
+main = Main
+executable = main
