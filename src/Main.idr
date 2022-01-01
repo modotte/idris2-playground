@@ -110,6 +110,16 @@ testPicture = Combine
                 (Combine (Translate 35 5 circle)
                     $ Translate 15 25 triangle)
 
+-- These are for auto type def fill
+%name Shape shape, shape1, shape2
+%name Picture pic, pic1, pic2
+
+pictureArea : Picture -> Double
+pictureArea (Primitive shape) = area shape
+pictureArea (Combine pic pic1) = pictureArea pic + pictureArea pic1
+pictureArea (Rotate x pic) = pictureArea pic
+pictureArea (Translate x y pic) = pictureArea pic
+
 
 
 
