@@ -78,6 +78,23 @@ area (Circle radius) = pi * radius * radius
 -- To test above, example: area $ Triangle 5.2 4.2 or area $ Circle 4.2 22.2
 
 
+-- Recursive types
+data Nat = Z | S Main.Nat
+
+
+{- In F#, this could be -
+ - type Picture =
+        | Primitive of double  // no shape defined, so use double as placeholder
+        | Combine of Picture * Picture
+        | Rotate of double * Picture
+        | Translate of double * double * Picture
+ -}
+data Picture = Primitive Shape
+             | Combine Picture Picture
+             | Rotate Double Picture
+             | Translate Double Double Picture
+
+
 
 
 
