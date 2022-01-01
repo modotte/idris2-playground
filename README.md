@@ -8,6 +8,3 @@ Most of the examples are derived from Type Driven Development with Idris (modife
 > The code is primary tested and written in the REPL.
 
 To build, you could just run `idris2 build src/Main.idr` or even better, use sirdi and run `sirdi build`.
-
-
-## Run
