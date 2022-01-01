@@ -48,6 +48,17 @@ insSort (x :: xs) =
     let xsSorted = insSort xs in
         insert x xsSorted
 
+-- All about data definitions
+data Bool = False | True
+
+data Direction = Up | Right | Down | Left
+
+turnClockWise : Direction -> Direction
+turnClockWise Up = Right
+turnClockWise Right = Down
+turnClockWise Down = Left
+turnClockWise Left = Up
+
 
 
 
