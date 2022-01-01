@@ -79,7 +79,6 @@ area (Circle radius) = pi * radius * radius
 
 
 -- Recursive types
-data Nat = Z | S Main.Nat
 
 
 {- In F#, this could be -
@@ -133,6 +132,13 @@ biggestTriangle pic =
                    _            => Nothing
          _           =>  Nothing
 
+
+-- Dependent types (finally a much more precise data type definition constructor)
+data PowerSource = Petrol | Pedal
+data Vehicle: PowerSource -> Type where
+     Bicycle: Vehicle Pedal
+     Car: (fuel: Nat) -> Vehicle Petrol
+     Minivan: (fuel: Nat) -> Vehicle Petrol
 
 main : IO ()
 main = do
