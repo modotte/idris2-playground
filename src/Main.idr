@@ -140,6 +140,16 @@ data Vehicle: PowerSource -> Type where
      Car: (fuel: Nat) -> Vehicle Petrol
      Minivan: (fuel: Nat) -> Vehicle Petrol
 
+wheels: Vehicle p -> Nat
+wheels Bicycle = 2
+wheels (Car fuel) = 350
+wheels (Minivan fuel) = 500
+
+refuel : Vehicle Petrol -> Vehicle Petrol
+refuel (Car fuel) = Car 100
+refuel (Minivan fuel) = Minivan 150
+
+
 main : IO ()
 main = do
     putStrLn "Hello from Idris2 Playground about types and pure functions"
