@@ -106,8 +106,7 @@ triangle = Primitive $ Triangle 10 10
 testPicture : Picture
 testPicture = Combine 
                 (Translate 5 5 rectangle)
-                (Combine (Translate 35 5 circle)
-                    $ Translate 15 25 triangle)
+                (Combine (Translate 35 5 circle) (Translate 15 25 triangle))
 
 -- These are for auto type def fill
 %name Shape shape, shape1, shape2
