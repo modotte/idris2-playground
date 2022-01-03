@@ -148,6 +148,10 @@ refuel : Vehicle Petrol -> Vehicle Petrol
 refuel (Car fuel) = Car 100
 refuel (Minivan fuel) = Minivan 150
 
+mappend : Vect n e -> Vect m e -> Vect (n + m) e
+mappend [] ys = ys
+mappend (x :: xs) ys = x :: mappend xs ys
+
 
 main : IO ()
 main = do
