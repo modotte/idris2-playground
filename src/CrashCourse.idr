@@ -28,3 +28,20 @@ greet = do
     putStr "What is your name? "
     name <- getLine
     putStrLn ("Hello " ++ name ++ "!")
+
+
+record Person where
+    constructor MkPerson
+    firstName, middleName, lastName : String
+    nickName: String
+    age : Int
+
+jake : Person
+jake = MkPerson "Jake" "Hammond" "Jameson" "Jarl" 25
+
+{-
+- In F#, we do { jake with firstName = "Hammond"; nickName = "Sickle" }
+-}
+jakesTwinBrother : Person
+jakesTwinBrother = { firstName := "Hammond", nickName := "Sickle" } jake
+
