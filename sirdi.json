@@ -1,1 +1,1 @@
-[{ "deps": [ ], "modules": [ "Main" ], "main": "Main", "name": "play" }]
+[{ "deps": [ ], "modules": [ "Main", "CrashCourse" ], "main": "Main", "name": "play" }]

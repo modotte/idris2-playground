@@ -5,15 +5,7 @@ import Data.List
 import Data.Vect
 import System.REPL
 
-xor : Bool -> Bool -> Bool
-xor False y = y
-xor True y = not y
-
-longer : String -> String -> Nat
-longer x y 
-    = let l1 = length x
-          l2 = length y in
-          if l1 > l2 then l1 else l2
+import CrashCourse
 
 pythagoras : Double -> Double -> Double
 pythagoras x y = sqrt (square x + square y)

@@ -1,6 +1,6 @@
 package play
 sourcedir = "src"
-modules = Main
+modules = Main, CrashCourse
 
 main = Main
 executable = main
