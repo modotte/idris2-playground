@@ -22,3 +22,9 @@ isSingleton True = List Nat
 makeSingle : (x : Bool) -> isSingleton x
 makeSingle False = 0
 makeSingle True = []
+
+greet : IO ()
+greet = do
+    putStr "What is your name? "
+    name <- getLine
+    putStrLn ("Hello " ++ name ++ "!")
