@@ -5,10 +5,12 @@ import Data.List
 import Data.Vect
 import System.REPL
 
+export
 xor : Bool -> Bool -> Bool
 xor False y = y
 xor True y = not y
 
+export
 longer : String -> String -> Nat
 longer x y 
     = let l1 = length x
